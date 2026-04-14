@@ -3,6 +3,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+p{
+    margin: 0;
+}
+
 main {
     margin: auto;
     width: 600px;
@@ -16,6 +20,37 @@ main > * {
     padding: 0 20px;
 }
 
+.search-container {
+  position: relative;
+  width: 450px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 35px 10px 40px; /* left padding = space for icon */
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Magnifying glass */
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* so you can click input */
+  font-size: 18px;
+}
+
+/* Clear button (X) */
+.close-filter {
+  position: absolute;
+  left: 535px;
+  top: 28%;
+  cursor: pointer;
+}
+
 .result {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -24,7 +59,7 @@ main > * {
 }
 
 .result > * {
-    margin: 5px 5px 5px 5px;
+    margin: 5px 15px 15px 15px;
 }
 
 .meal-header {
@@ -46,13 +81,18 @@ main > * {
     float: right;
 }
 
+.tags{
+    display: flex;
+    gap: 8px;
+}
+
 .tag {
     display: inline-block;
     padding: 0 6px;
     border-radius: 15px;
     text-align: center;
     margin-right: 0;
-
+    padding-bottom: 2px;
 }
 
 .tag-blue {
@@ -69,12 +109,21 @@ main > * {
 
 .main-ingredients-and-portion-size {
     display: flex;
-    gap: 50px;
+    /* gap: 50px; */
+}
+
+.minute{
+    padding-right: 50px;
+}
+
+.hour{
+    padding-right: 90px;
 }
 
 .read-recipe {
     display: block;
     text-align: right;
+    cursor: pointer;
 }
 
 
