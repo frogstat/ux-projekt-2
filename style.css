@@ -125,6 +125,10 @@ main > * {
     cursor: pointer;
 }
 
+.toggle-options{
+    
+}
+
 @media (max-width: 600px) {
     main {
         width: 100%;
