@@ -125,5 +125,18 @@ main > * {
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+    }
 
+    .floating-right {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 
+    .search-container {
+        max-width: 83%;
+    }
+}
