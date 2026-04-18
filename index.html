@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Catering</title>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,17 +17,111 @@
                 <span class="icon"><img src="magnifying-glass.png" alt="magnifying-glass" height="25"
                         style="margin-top: 5px;"></span>
                 <input type="text" placeholder="Skaldjur och fisk">
-                <span class="close-filter"><img src="x.png" alt="x" height="20"></span>
+                <span class="close-filter"><img src="filter.png" alt="filter" height="20"></span>
             </div>
             <div class="toggle-options">
-                <p>Smårätt</p>
-                <p>Förrätt</p>
-                <p>Huvudrätt</p>
-                <p>Efterrätt</p>
+                <p class="tag tag-grey">Smårätt</p>
+                <p class="tag tag-blue">Förrätt</p>
+                <p class="tag tag-blue">Huvudrätt</p>
+                <p class="tag tag-grey">Efterrätt</p>
             </div>
         </div>
         <div class="filter">
-            <div></div>
+            <h2>Filtrera</h2>
+
+            <div class="filter-flex">
+                <div class="dropdown">
+                    <p><b>Tema</b></p>
+                    <select name="theme" id="theme">
+                        <option value="scandinavian">Skandinaviskt</option>
+                        <option value="italian">Italiensk</option>
+                        <option value="asian">Asiatiskt</option>
+                        <option value="middle-eastern">Mellanöstern</option>
+                        <option value="mexican">Mexikanskt</option>
+                    </select>
+                </div>
+
+                <div class="dropdown">
+                    <p><b>Huvudingrediens</b></p>
+                    <select name="main-ingredient" id="main-ingredient">
+                        <option value="shrimp">Räkor</option>
+                        <option value="lobster">Hummer</option>
+                        <option value="crayfish">Kräftor</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <br>
+            <hr>
+
+            <p><b>Kostpreferenser</b></p>
+            <div class="checkbox-grid">
+                <label><input type="checkbox"> Vegetariskt</label>
+                <label><input type="checkbox"> Veganskt</label>
+                <label><input type="checkbox"> Halal</label>
+                <label><input type="checkbox"> Kosher</label>
+                <label><input type="checkbox"> Pescetarian</label>
+                <label><input type="checkbox"> Pollotarian</label>
+                <label><input type="checkbox"> Flexitarian</label>
+                <label><input type="checkbox"> Kött</label>
+            </div>
+
+            <p><b>Allergier</b></p>
+            <div class="checkbox-grid">
+                <label><input type="checkbox"> Mjölk</label>
+                <label><input type="checkbox"> Laktos</label>
+                <label><input type="checkbox"> Ägg</label>
+                <label><input type="checkbox"> Gluten</label>
+                <label><input type="checkbox"> Nötter</label>
+                <label><input type="checkbox"> Fisk</label>
+                <label><input type="checkbox"> Skaldjur</label>
+            </div>
+
+            <div class="options-container">
+                <p style="margin-bottom: 7px"><b>Ange övrig allergi</b></p>
+                <label><input type="text" placeholder="Tomat" id="other-allergy-input"></label>
+            </div>
+
+            <br>
+            <hr>
+
+            <div class="filter-flex">
+                <div class="input-number">
+                    <p><b>Antal portioner</b></p>
+                    <div class="number-input-wrapper">
+                        <input type="number" id="portioner" placeholder="36">
+                        <div class="arrows">
+                            <button
+                                onclick="this.closest('.number-input-wrapper').querySelector('input').stepUp()">▲</button>
+                            <button
+                                onclick="this.closest('.number-input-wrapper').querySelector('input').stepDown()">▼</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-number">
+                    <p><b>Kundens budget</b></p>
+                    <div class="kr-wrapper">
+                        <input type="text" id="budget" placeholder="13 000 kr">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="filter-flex">
+                <p><b>Pris per portion</b></p>
+                <p style="color: #818181">59kr - 369kr</p>
+            </div>
+
+            <label><input type="range" name="" id=""></label>
+
+            <div class="filter-buttons">
+                <button class="button">Rensa</button>
+                <button>Spara</button>
+            </div>
+
         </div>
 
         <div class="results">
