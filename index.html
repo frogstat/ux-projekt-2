@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Catering</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -90,7 +90,7 @@
                 <div class="input-number">
                     <p><b>Antal portioner</b></p>
                     <div class="number-input-wrapper">
-                        <input type="number" id="portioner" placeholder="36">
+                        <input type="number" id="portions" placeholder="36">
                         <div class="arrows">
                             <button
                                 onclick="this.closest('.number-input-wrapper').querySelector('input').stepUp()">▲</button>
@@ -112,15 +112,22 @@
 
             <div class="filter-flex">
                 <p><b>Pris per portion</b></p>
-                <p style="color: #818181">59kr - 369kr</p>
+                <p id="slider-values" style="color: #818181">59kr - 369kr</p>
             </div>
 
-            <label><input type="range" name="" id=""></label>
+            <!-- <div class="range-flex">
+                <input type="range">
+            </div> -->
+
+            <div id="price-slider"></div>
 
             <div class="filter-buttons">
-                <button class="button">Rensa</button>
-                <button>Spara</button>
+                <button class="btn-white">Rensa</button>
+                <button class="btn-gray">Spara</button>
             </div>
+
+            <br>
+            <hr>
 
         </div>
 
@@ -176,6 +183,25 @@
                 <div class="main-ingredients-and-portion-size">
                     <p class="minute"><b>45 min</b>
                     <p><b>15 - 80 portioner</b></p>
+                </div>
+                <hr>
+                <p><b>Kan göras</b></p>
+                <p><i>Vegetariskt, vegansk</i></p>
+                <p class="read-recipe"><u><b>Läs recept</b></u></p>
+            </div>
+
+            <div class="result">
+                <div class="meal-header">
+                    <p class="floating-right">180kr / portion</p>
+                    <h2>Ravioli med kräftor</h2>
+                </div>
+                <div class="tags">
+                    <p class="tag tag-grey">Italieskt</p>
+                    <p class="tag tag-blue">Kräftor</p>
+                </div>
+                <div class="main-ingredients-and-portion-size">
+                    <p class="minute"><b>45 min</b>
+                    <p><b>15 - 60 portioner</b></p>
                 </div>
                 <hr>
                 <p><b>Kan göras</b></p>

@@ -15,7 +15,7 @@ main {
     border-radius: 10px;
 }
 
-main>* {
+main > * {
     padding: 0 20px;
 }
 
@@ -24,7 +24,7 @@ select {
     width: 100%;
     background-color: #f1f1f1;
     border-radius: 5px;
-    border: 1px solid #141414;
+    border: 1px solid #6c6c6c;
     color: #6c6c6c;
     font-size: medium;
 }
@@ -35,8 +35,17 @@ input[type="number"]{
     background-color: #f1f1f1;
     border-radius: 5px;
     color: #6c6c6c;
-    border: 1px solid #141414;
+    border: 1px solid #6c6c6c;
     font-size: medium;
+}
+
+input[type="range"]{
+}
+
+button{
+    padding: 12px 20px;
+    font-size: large;
+    border: 1px solid #141414;
 }
 
 .search-container {
@@ -50,7 +59,7 @@ input[type="number"]{
     background-color: #f1f1f1;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid #141414;
+    border: 1px solid #6c6c6c;
 }
 
 .icon {
@@ -162,7 +171,22 @@ input[type="number"]{
 
 .filter-buttons{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 50px;
+}
+
+.btn-white{
+    background-color: white;
+    color: #6c6c6c;
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+}
+
+.btn-gray{
+    background-color: #9c9e9f;
+    color: white;
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
 }
 
 .dropdown {
@@ -206,7 +230,7 @@ input[type="number"]{
     background-color: #f1f1f1;
     color: #6c6c6c;
     font-size: medium;
-    border: 1px solid #141414;
+    border: 1px solid #6c6c6c;
     border-radius: 8px;
     box-sizing: border-box;
 }
@@ -231,8 +255,15 @@ input[type="number"]{
     color: #6c6c6c;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid #141414;
+    border: 1px solid #6c6c6c;
 }
+
+/* .range-flex{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+} */
 
 @media (max-width: 600px) {
     main {
