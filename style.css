@@ -39,9 +39,6 @@ input[type="number"]{
     font-size: medium;
 }
 
-input[type="range"]{
-}
-
 button{
     padding: 12px 20px;
     font-size: large;
@@ -257,13 +254,6 @@ button{
     border-radius: 8px;
     border: 1px solid #6c6c6c;
 }
-
-/* .range-flex{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-} */
 
 @media (max-width: 600px) {
     main {
