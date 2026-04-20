@@ -19,7 +19,8 @@
                 <span class="icon"><img src="images/magnifying-glass.png" alt="magnifying-glass" height="25"
                         style="margin-top: 5px;"></span>
                 <input type="text" placeholder="Skaldjur och fisk">
-                <span class="close-filter"><img id="filter-icon" src="images/filter.png" alt="filter" height="20"></span>
+                <span class="close-filter"><img id="filter-icon" src="images/filter.png" alt="filter"
+                        height="20"></span>
             </div>
             <div class="toggle-options">
                 <p class="tag tag-grey">Smårätt</p>
@@ -29,104 +30,106 @@
             </div>
         </div>
         <div class="filter">
-            <h2>Filtrera</h2>
+            <form>
+                <h2>Filtrera</h2>
 
-            <div class="filter-flex">
-                <div class="dropdown">
-                    <p><b>Tema</b></p>
-                    <select name="theme" id="theme">
-                        <option value="scandinavian">Skandinaviskt</option>
-                        <option value="italian">Italiensk</option>
-                        <option value="asian">Asiatiskt</option>
-                        <option value="middle-eastern">Mellanöstern</option>
-                        <option value="mexican">Mexikanskt</option>
-                    </select>
+                <div class="filter-flex">
+                    <div class="dropdown">
+                        <p><b>Tema</b></p>
+                        <select name="theme" id="theme">
+                            <option value="scandinavian">Skandinaviskt</option>
+                            <option value="italian">Italiensk</option>
+                            <option value="asian">Asiatiskt</option>
+                            <option value="middle-eastern">Mellanöstern</option>
+                            <option value="mexican">Mexikanskt</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown">
+                        <p><b>Huvudingrediens</b></p>
+                        <select name="main-ingredient" id="main-ingredient">
+                            <option value="shrimp">Räkor</option>
+                            <option value="lobster">Hummer</option>
+                            <option value="crayfish">Kräftor</option>
+                        </select>
+                    </div>
+
                 </div>
 
-                <div class="dropdown">
-                    <p><b>Huvudingrediens</b></p>
-                    <select name="main-ingredient" id="main-ingredient">
-                        <option value="shrimp">Räkor</option>
-                        <option value="lobster">Hummer</option>
-                        <option value="crayfish">Kräftor</option>
-                    </select>
+                <br>
+                <hr>
+
+                <p><b>Kostpreferenser</b></p>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox"> Vegetariskt</label>
+                    <label><input type="checkbox"> Veganskt</label>
+                    <label><input type="checkbox"> Halal</label>
+                    <label><input type="checkbox"> Kosher</label>
+                    <label><input type="checkbox"> Pescetarian</label>
+                    <label><input type="checkbox"> Pollotarian</label>
+                    <label><input type="checkbox"> Flexitarian</label>
+                    <label><input type="checkbox"> Kött</label>
                 </div>
 
-            </div>
+                <p><b>Allergier</b></p>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox"> Mjölk</label>
+                    <label><input type="checkbox"> Laktos</label>
+                    <label><input type="checkbox"> Ägg</label>
+                    <label><input type="checkbox"> Gluten</label>
+                    <label><input type="checkbox"> Nötter</label>
+                    <label><input type="checkbox"> Fisk</label>
+                    <label><input type="checkbox"> Skaldjur</label>
+                </div>
 
-            <br>
-            <hr>
+                <div class="options-container">
+                    <p style="margin-bottom: 7px"><b>Ange övrig allergi</b></p>
+                    <label><input type="text" placeholder="Tomat" id="other-allergy-input"></label>
+                </div>
 
-            <p><b>Kostpreferenser</b></p>
-            <div class="checkbox-grid">
-                <label><input type="checkbox"> Vegetariskt</label>
-                <label><input type="checkbox"> Veganskt</label>
-                <label><input type="checkbox"> Halal</label>
-                <label><input type="checkbox"> Kosher</label>
-                <label><input type="checkbox"> Pescetarian</label>
-                <label><input type="checkbox"> Pollotarian</label>
-                <label><input type="checkbox"> Flexitarian</label>
-                <label><input type="checkbox"> Kött</label>
-            </div>
+                <br>
+                <hr>
 
-            <p><b>Allergier</b></p>
-            <div class="checkbox-grid">
-                <label><input type="checkbox"> Mjölk</label>
-                <label><input type="checkbox"> Laktos</label>
-                <label><input type="checkbox"> Ägg</label>
-                <label><input type="checkbox"> Gluten</label>
-                <label><input type="checkbox"> Nötter</label>
-                <label><input type="checkbox"> Fisk</label>
-                <label><input type="checkbox"> Skaldjur</label>
-            </div>
+                <div class="filter-flex">
+                    <div class="input-number">
+                        <p><b>Antal portioner</b></p>
+                        <div class="number-input-wrapper">
+                            <input type="number" id="portions" placeholder="36" min="0">
+                            <div class="arrows">
+                                <button type="button"
+                                    onclick="this.closest('.number-input-wrapper').querySelector('input').stepUp()">▲</button>
+                                <button type="button"
+                                    onclick="this.closest('.number-input-wrapper').querySelector('input').stepDown()">▼</button>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="options-container">
-                <p style="margin-bottom: 7px"><b>Ange övrig allergi</b></p>
-                <label><input type="text" placeholder="Tomat" id="other-allergy-input"></label>
-            </div>
-
-            <br>
-            <hr>
-
-            <div class="filter-flex">
-                <div class="input-number">
-                    <p><b>Antal portioner</b></p>
-                    <div class="number-input-wrapper">
-                        <input type="number" id="portions" placeholder="36" min="0">
-                        <div class="arrows">
-                            <button
-                                onclick="this.closest('.number-input-wrapper').querySelector('input').stepUp()">▲</button>
-                            <button
-                                onclick="this.closest('.number-input-wrapper').querySelector('input').stepDown()">▼</button>
+                    <div class="input-number">
+                        <p><b>Kundens budget</b></p>
+                        <div class="kr-wrapper">
+                            <input type="text" id="budget" placeholder="13 000 kr">
                         </div>
                     </div>
                 </div>
 
-                <div class="input-number">
-                    <p><b>Kundens budget</b></p>
-                    <div class="kr-wrapper">
-                        <input type="text" id="budget" placeholder="13 000 kr">
-                    </div>
+                <br>
+
+                <div class="filter-flex">
+                    <p><b>Pris per portion</b></p>
+                    <p id="slider-values" style="color: #818181">59kr - 369kr</p>
                 </div>
-            </div>
 
-            <br>
+                <div id="price-slider"></div>
 
-            <div class="filter-flex">
-                <p><b>Pris per portion</b></p>
-                <p id="slider-values" style="color: #818181">59kr - 369kr</p>
-            </div>
+                <div class="filter-buttons">
+                    <button type="reset" class="btn-white" id="reset-btn">Rensa</button>
+                    <button type="button" class="btn-gray">Spara</button>
+                </div>
 
-            <div id="price-slider"></div>
+                <br>
+                <hr>
 
-            <div class="filter-buttons">
-                <button class="btn-white">Rensa</button>
-                <button class="btn-gray">Spara</button>
-            </div>
-
-            <br>
-            <hr>
-
+            </form>
         </div>
 
         <div class="results">

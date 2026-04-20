@@ -60,3 +60,8 @@ searchInput.addEventListener('input', () => {
         }
     });
 });
+
+document.getElementById('reset-btn').addEventListener('click', () => {
+    slider.noUiSlider.reset();
+    document.getElementById('slider-values').textContent = '59kr - 369kr';
+});
