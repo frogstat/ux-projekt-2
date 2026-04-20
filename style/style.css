@@ -165,9 +165,14 @@ button{
     gap: 15px;
 }
 
-.filter{
-    /* display: none; */
-    /* display: block för att få tillbaka det */
+.filter {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.filter.open {
+    max-height: 1000px; /* must be larger than content height */
 }
 
 .filter-flex {

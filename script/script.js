@@ -18,12 +18,9 @@ const filterIcon = document.getElementById("filter-icon");
 const filterSettings = document.getElementsByClassName("filter")[0];
 let isFilter = false;
 
-filterSettings.style.display = 'none';
-filterIcon.src = isFilter ? 'images/x.png' : 'images/filter.png';
-
 filterButton.addEventListener('click', () => {
     isFilter = !isFilter;
-    filterSettings.style.display = filterSettings.style.display === 'none' ? 'block' : 'none';
+    filterSettings.classList.toggle("open");
     filterIcon.src = isFilter ? 'images/x.png' : 'images/filter.png';
 });
 
