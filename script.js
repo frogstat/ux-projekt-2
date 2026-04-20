@@ -25,3 +25,20 @@ filterButton.addEventListener('click', () => {
     filterSettings.style.display = filterSettings.style.display === 'none' ? 'block' : 'none';
     filterIcon.src = isFilter ? 'x.png' : 'filter.png';
 });
+
+const slider = document.getElementById('price-slider');
+
+noUiSlider.create(slider, {
+    start: [59, 369],
+    connect: true,
+    range: {
+        min: 0,
+        max: 1000
+    }
+});
+
+slider.noUiSlider.on('update', (values) => {
+    const min = Math.round(values[0]);
+    const max = Math.round(values[1]);
+    document.getElementById('slider-values').textContent = `${min}kr - ${max}kr`;
+});
