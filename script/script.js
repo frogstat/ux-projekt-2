@@ -46,14 +46,22 @@ slider.noUiSlider.on('update', (values) => {
 
 const searchInput = document.querySelector('.search-container input');
 const results = document.querySelectorAll('.result');
+const divResults = document.getElementsByClassName("results")[0];
+divResults.style.display = 'none';
 
 searchInput.addEventListener('input', () => {
     const searchValue = searchInput.value.trim().toLowerCase();
 
+    if(searchValue.length > 0){
+        divResults.style.display = 'block';
+    } else {
+        divResults.style.display = 'none';
+    }
+    
     results.forEach(result => {
         const text = result.textContent.toLowerCase();
 
-        if (searchValue === '' || text.includes(searchValue)) {
+        if (text.includes(searchValue)) {
             result.style.display = 'block';
         } else {
             result.style.display = 'none';
