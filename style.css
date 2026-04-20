@@ -1,6 +1,7 @@
 body {
     background-color: #dfdfdf;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
 p {
@@ -221,6 +222,15 @@ button{
     text-align: center;
 }
 
+#portions::-webkit-outer-spin-button,
+#portions::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#portions {
+    -moz-appearance: textfield;
+}
+
 #budget{
     height: 40px;
     width: 100%;
@@ -253,6 +263,37 @@ button{
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #6c6c6c;
+}
+
+/* Spåret (bakgrunden) */
+.noUi-target {
+    background: #e0e0e0;
+    border: none;
+    box-shadow: none;
+    height: 4px;
+    margin: 30px 30px;
+}
+
+/* Den färgade delen mellan handtagen */
+.noUi-connect {
+    background: #333;
+}
+
+/* Handtagen */
+.noUi-handle {
+    background: #111;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+    width: 16px !important;
+    height: 16px !important;
+    top: -6px !important; /* centrerar handtaget vertikalt */
+}
+
+/* Tar bort de små pilarna på handtagen */
+.noUi-handle::before,
+.noUi-handle::after {
+    display: none;
 }
 
 @media (max-width: 600px) {

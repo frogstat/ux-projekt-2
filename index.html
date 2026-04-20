@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -90,7 +92,7 @@
                 <div class="input-number">
                     <p><b>Antal portioner</b></p>
                     <div class="number-input-wrapper">
-                        <input type="number" id="portions" placeholder="36">
+                        <input type="number" id="portions" placeholder="36" min="0">
                         <div class="arrows">
                             <button
                                 onclick="this.closest('.number-input-wrapper').querySelector('input').stepUp()">▲</button>
