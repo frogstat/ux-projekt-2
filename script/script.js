@@ -73,3 +73,10 @@ document.getElementById('reset-btn').addEventListener('click', () => {
     slider.noUiSlider.reset();
     document.getElementById('slider-values').textContent = '59kr - 369kr';
 });
+
+document.querySelector('.toggle-options').addEventListener('click', function (e) {
+    if (!e.target.classList.contains('tag')) return;
+
+    e.target.classList.toggle('tag-blue');
+    e.target.classList.toggle('tag-grey');
+});
