@@ -17,6 +17,7 @@ const filterButton = document.getElementsByClassName("close-filter")[0];
 const filterIcon = document.getElementById("filter-icon");
 const filterSettings = document.getElementsByClassName("filter")[0];
 let isFilter = false;
+
 filterSettings.style.display = 'none';
 filterIcon.src = isFilter ? 'x.png' : 'filter.png';
 
@@ -41,4 +42,21 @@ slider.noUiSlider.on('update', (values) => {
     const min = Math.round(values[0]);
     const max = Math.round(values[1]);
     document.getElementById('slider-values').textContent = `${min}kr - ${max}kr`;
+});
+
+const searchInput = document.querySelector('.search-container input');
+const results = document.querySelectorAll('.result');
+
+searchInput.addEventListener('input', () => {
+    const searchValue = searchInput.value.trim().toLowerCase();
+
+    results.forEach(result => {
+        const text = result.textContent.toLowerCase();
+
+        if (searchValue === '' || text.includes(searchValue)) {
+            result.style.display = 'block';
+        } else {
+            result.style.display = 'none';
+        }
+    });
 });
